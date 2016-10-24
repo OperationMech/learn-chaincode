@@ -70,7 +70,7 @@
 		{
 			"name": "Deploy",
 			"request": {
-				"url": "http://<PEER_HOST>:<PEER_PORT>/chaincode",
+				"url": "https://c88fcfed1eb04ef1a96dd0e26a53ea97-vp0.us.blockchain.ibm.com:444",
 				"method": "POST",
 				"header": [
 					{
@@ -81,7 +81,7 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n  \"jsonrpc\": \"2.0\",\n  \"method\": \"deploy\",\n  \"params\": {\n    \"type\": 1,\n    \"chaincodeID\": {\n      \"path\": \"https://github.com/<YOUR_GITHUB_ID_HERE>/learn-chaincode/finished\"\n    },\n    \"ctorMsg\": {\n      \"function\": \"init\",\n      \"args\": [\n        \"hi there\"\n      ]\n    },\n    \"secureContext\": \"<YOUR_USER_HERE>\"\n  },\n  \"id\": 1\n}"
+					"raw": "{\n  \"jsonrpc\": \"2.0\",\n  \"method\": \"deploy\",\n  \"params\": {\n    \"type\": 1,\n    \"chaincodeID\": {\n      \"path\": \"https://github.com/operationmech/learn-chaincode/finished\"\n    },\n    \"ctorMsg\": {\n      \"function\": \"init\",\n      \"args\": [\n        \"hi there\"\n      ]\n    },\n    \"secureContext\": \"OperationMech\"\n  },\n  \"id\": 1\n}"
 				},
 				"description": "Deploys chaincode_example02 to the peers and returns the name of the\nchaincode.  This name should be used in all subsequent Invoke and Query\ncalls."
 			},
